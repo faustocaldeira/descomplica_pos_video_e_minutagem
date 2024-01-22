@@ -176,7 +176,6 @@ def gera_minutagem(driver):
             output.append((nome_modulo))
         return output
 
-
     def get_all_materias_name(all_modulos_name):
         output = []
         logging.info('Obtendo todos os nomes das matérias.')
@@ -189,7 +188,6 @@ def gera_minutagem(driver):
                 logging.info(f'Modulo: {nome_modulo}, Matéria: {nome_materia}.')
                 output.append((nome_modulo, nome_materia))
         return output
-    
 
     def get_all_aulas_tempo(all_materias_name):
         output = []
@@ -262,7 +260,7 @@ def gera_minutagem(driver):
 
     return all_aulas_tempo
 
-    
+
 def gera_csv(lista_de_tuplas):
     # Nome do arquivo CSV
     nome_arquivo_csv = 'output.csv'
@@ -281,7 +279,6 @@ def gera_csv(lista_de_tuplas):
 
 
 if __name__ == "__main__":
-    
     driver = launch_driver()
     login(driver)
     url_disciplinas(driver)
@@ -289,4 +286,3 @@ if __name__ == "__main__":
     gera_csv(output)
     logout(driver)
     close(driver)
-
